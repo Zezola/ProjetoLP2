@@ -28,20 +28,37 @@ public class FigureFrame extends JFrame {
                         super.keyPressed(e);
 
                         switch (e.getKeyChar()){
+                            case ('w'):
+                                figureList.get(figureList.size()-1).drag(0, -3);
+                                break;
                             case ('s'):
+                                figureList.get(figureList.size()-1).drag(0, 3);
+                                break;
+                            case ('a'):
+                                figureList.get(figureList.size()-1).drag(-3, 0);
+                                break;
+                            case ('d'):
+                                figureList.get(figureList.size()-1).drag(3, 0);
+                                break;
+                            case ('q'):
                                 figureList.add(new Square((int)currentMouseLocation.getX(),
                                         (int)currentMouseLocation.getY(), 100, 100));
+                                break;
+                            case('e'):
+                                figureList.add(new Ellipse((int)currentMouseLocation.getX(),
+                                        (int)currentMouseLocation.getY(), 100, 70));
                                 break;
                             case ('c'):
                                 figureList.add(new Circle((int)currentMouseLocation.getX(),
                                         (int)currentMouseLocation.getY(), 100));
                                 break;
                             case ('+'):
-                                Figure lastFigure = figureList.get(figureList.size()-1);
-                                lastFigure.resize(10,10);
+                                figureList.get(figureList.size()-1).resize(5,5);
                                 break;
-                            default:
-                                System.exit(0);
+                            case ('-'):
+                                figureList.get(figureList.size()-1).resize(-5, -5);
+
+
                         }
                         repaint();
                     }
