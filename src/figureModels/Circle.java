@@ -26,14 +26,12 @@ public class Circle extends Figure{
         g2d.fillOval(this.x, this.y, this.radius, this.radius);
     }
 
-    @Override
-    public void select(Graphics g) {
-        System.out.println("CIRCLE");
-    }
+
 
     @Override
     public void drag(int dx, int dy) {
-
+        this.x += dx;
+        this.y += dy;
     }
 
     @Override
@@ -43,8 +41,5 @@ public class Circle extends Figure{
 
 
 
-    @Override
-    public void print() {
-        System.out.println("CIRCULO");
-    }
+
 }

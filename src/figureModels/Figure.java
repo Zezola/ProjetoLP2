@@ -22,7 +22,7 @@ public abstract class Figure implements IFigure {
         this.radius = radius;
     }
 
-    public abstract void print();
+
     public abstract void drag(int dx, int dy);
     public abstract void resize(int rw, int rh);
 

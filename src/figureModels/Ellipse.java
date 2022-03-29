@@ -16,7 +16,7 @@ public class Ellipse extends Figure {
     }
     @Override
     public boolean clicked(int x, int y) {
-        return false;
+        return (this.x<=x && x<=this.x+this.w && this.y<=y && y<=this.y+this.h);
     }
 
     @Override
@@ -27,15 +27,9 @@ public class Ellipse extends Figure {
         g2d.fillOval(this.x, this.y, this.w, this.h);
     }
 
-    @Override
-    public void select(Graphics g) {
 
-    }
 
-    @Override
-    public void print() {
 
-    }
 
     @Override
     public void drag(int dx, int dy) {

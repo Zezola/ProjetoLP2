@@ -26,20 +26,6 @@ public class Square extends Figure{
         g2d.fillRect(this.x, this.y, this.w, this.h);
     }
 
-    @Override
-    public void select(Graphics g) {
-        Graphics2D g2d = (Graphics2D) g;
-        g2d.setColor(Color.red);
-        g2d.setStroke(new BasicStroke(5));
-        g2d.drawRect(this.x, this.y, this.w, this.h);
-        g2d.setColor(Color.green);
-        g2d.fillRect(this.x, this.y, this.w, this.h);
-    }
-
-    public void print() {
-        System.out.printf("Square with x,y,w,h = %d, %d, %d, %d \n",
-                this.x, this.y, this.w, this.h);
-    }
 
     public void drag(int dx, int dy) {
         this.x += dx;
