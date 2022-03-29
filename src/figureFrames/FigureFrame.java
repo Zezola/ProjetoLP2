@@ -86,10 +86,7 @@ public class FigureFrame extends JFrame {
                         repaint();
                     }
 
-                    @Override
-                    public void mousePressed(MouseEvent e) {
-                        super.mousePressed(e);
-                    }
+
                 }
         );
         this.setSize(500, 500);
